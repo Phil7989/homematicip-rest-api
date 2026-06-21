@@ -1,0 +1,267 @@
+{
+  "clients": {
+    "00000000-0000-0000-0000-000000000000": {
+      "homeId": "00000000-0000-0000-0000-000000000002",
+      "id": "00000000-0000-0000-0000-000000000000",
+      "label": "HCU-TEST-Client",
+      "clientType": "APP"
+    }
+  },
+  "devices": {
+    "3014F711A000000HCU00001": {
+      "availableFirmwareVersion": "2.0.6",
+      "connectionType": "HMIP_LAN",
+      "firmwareVersion": "2.0.6",
+      "firmwareVersionInteger": 131078,
+      "functionalChannels": {
+        "0": {
+          "accessPointPriority": 0,
+          "busConfigMismatch": null,
+          "coProFaulty": false,
+          "coProRestartNeeded": false,
+          "coProUpdateFailure": false,
+          "configPending": false,
+          "deviceId": "3014F711A000000HCU00001",
+          "deviceOverheated": false,
+          "deviceOverloaded": false,
+          "devicePowerFailureDetected": false,
+          "deviceUndervoltage": false,
+          "dutyCycle": false,
+          "dutyCycleLevel": 5.0,
+          "filteredMulticastRoutingEnabled": false,
+          "functionalChannelType": "ACCESS_CONTROLLER_CHANNEL",
+          "groupIndex": 0,
+          "groups": [],
+          "index": 0,
+          "label": "",
+          "lowBat": null,
+          "multicastRoutingEnabled": false,
+          "powerShortCircuit": null,
+          "routerModuleEnabled": false,
+          "routerModuleSupported": false,
+          "rssiDeviceValue": null,
+          "rssiPeerValue": null,
+          "shortCircuitDataLine": null,
+          "signalBrightness": 1.0,
+          "supportedOptionalFeatures": {
+            "IFeatureBusConfigMismatch": false,
+            "IFeatureDeviceCoProError": false,
+            "IFeatureDeviceCoProRestart": false,
+            "IFeatureDeviceCoProUpdate": false,
+            "IFeatureDeviceIdentify": false,
+            "IFeatureDeviceOverheated": false,
+            "IFeatureDeviceOverloaded": false,
+            "IFeatureDevicePowerFailure": false,
+            "IFeatureDeviceTemperatureOutOfRange": false,
+            "IFeatureDeviceUndervoltage": false,
+            "IFeatureMulticastRouter": false,
+            "IFeaturePowerShortCircuit": false,
+            "IFeatureRssiValue": false,
+            "IFeatureShortCircuitDataLine": false,
+            "IOptionalFeatureDutyCycle": true,
+            "IOptionalFeatureLowBat": false
+          },
+          "temperatureOutOfRange": false,
+          "unreach": false
+        }
+      },
+      "homeId": "00000000-0000-0000-0000-000000000002",
+      "id": "3014F711A000000HCU00001",
+      "label": "HmIP-HCU1",
+      "lastStatusUpdate": 1700000000000,
+      "liveUpdateState": "LIVE_UPDATE_NOT_SUPPORTED",
+      "manufacturerCode": 1,
+      "modelId": 500,
+      "modelType": "HmIP-HCU1",
+      "oem": "eQ-3",
+      "permanentlyReachable": true,
+      "serializedGlobalTradeItemNumber": "3014F711A000000HCU00001",
+      "type": "ACCESS_POINT",
+      "updateState": "UP_TO_DATE"
+    },
+    "3014F711A0000SWITCH00001": {
+      "availableFirmwareVersion": "2.0.0",
+      "connectionType": "HMIP_RF",
+      "firmwareVersion": "2.0.0",
+      "firmwareVersionInteger": 131072,
+      "functionalChannels": {
+        "0": {
+          "busConfigMismatch": null,
+          "coProFaulty": false,
+          "coProRestartNeeded": false,
+          "coProUpdateFailure": false,
+          "configPending": false,
+          "deviceId": "3014F711A0000SWITCH00001",
+          "deviceOverheated": false,
+          "deviceOverloaded": false,
+          "devicePowerFailureDetected": false,
+          "deviceUndervoltage": false,
+          "dutyCycle": false,
+          "functionalChannelType": "DEVICE_BASE",
+          "groupIndex": 0,
+          "groups": [],
+          "index": 0,
+          "label": "",
+          "lowBat": false,
+          "multicastRoutingEnabled": false,
+          "powerShortCircuit": null,
+          "routerModuleEnabled": false,
+          "routerModuleSupported": false,
+          "rssiDeviceValue": -65,
+          "rssiPeerValue": -70,
+          "shortCircuitDataLine": null,
+          "supportedOptionalFeatures": {
+            "IFeatureBusConfigMismatch": false,
+            "IFeatureDeviceCoProError": false,
+            "IFeatureDeviceCoProRestart": false,
+            "IFeatureDeviceCoProUpdate": false,
+            "IFeatureDeviceIdentify": false,
+            "IFeatureDeviceOverheated": false,
+            "IFeatureDeviceOverloaded": false,
+            "IFeatureDevicePowerFailure": false,
+            "IFeatureDeviceTemperatureOutOfRange": false,
+            "IFeatureDeviceUndervoltage": false,
+            "IFeatureMulticastRouter": false,
+            "IFeaturePowerShortCircuit": false,
+            "IFeatureRssiValue": true,
+            "IFeatureShortCircuitDataLine": false,
+            "IOptionalFeatureDutyCycle": true,
+            "IOptionalFeatureLowBat": true
+          },
+          "temperatureOutOfRange": false,
+          "unreach": false
+        },
+        "1": {
+          "deviceId": "3014F711A0000SWITCH00001",
+          "functionalChannelType": "SWITCH_CHANNEL",
+          "groupIndex": 1,
+          "groups": [],
+          "index": 1,
+          "label": "",
+          "on": false,
+          "profileMode": "AUTOMATIC",
+          "userDesiredProfileMode": "AUTOMATIC"
+        }
+      },
+      "homeId": "00000000-0000-0000-0000-000000000002",
+      "id": "3014F711A0000SWITCH00001",
+      "label": "HCU-Switch",
+      "lastStatusUpdate": 1700000000000,
+      "liveUpdateState": "LIVE_UPDATE_NOT_SUPPORTED",
+      "manufacturerCode": 1,
+      "modelId": 262,
+      "modelType": "HmIP-PS",
+      "oem": "eQ-3",
+      "permanentlyReachable": true,
+      "serializedGlobalTradeItemNumber": "3014F711A0000SWITCH00001",
+      "type": "PLUGABLE_SWITCH",
+      "updateState": "UP_TO_DATE"
+    }
+  },
+  "groups": {},
+  "home": {
+    "accessPointUpdateStates": {
+      "3014F711A000000HCU00001": {
+        "accessPointUpdateState": "UP_TO_DATE",
+        "successfulUpdateTimestamp": 0,
+        "updateStateChangedTimestamp": 0
+      }
+    },
+    "apExchangeClientId": null,
+    "apExchangeState": "NONE",
+    "availableAPVersion": null,
+    "carrierSense": null,
+    "clients": [
+      "00000000-0000-0000-0000-000000000000"
+    ],
+    "connected": true,
+    "currentAPVersion": "2.0.6",
+    "deviceUpdateStrategy": "AUTOMATICALLY_IF_POSSIBLE",
+    "dutyCycle": 5.0,
+    "functionalHomes": {
+      "INDOOR_CLIMATE": {
+        "absenceEndTime": null,
+        "absenceType": "NOT_ABSENT",
+        "active": true,
+        "coolingEnabled": false,
+        "ecoDuration": "PERMANENT",
+        "ecoTemperature": 17.0,
+        "floorHeatingSpecificGroups": {},
+        "functionalGroups": [],
+        "optimumStartStopEnabled": false,
+        "solution": "INDOOR_CLIMATE"
+      },
+      "ENERGY": {
+        "active": false,
+        "functionalGroups": [],
+        "solution": "ENERGY"
+      },
+      "LIGHT_AND_SHADOW": {
+        "active": false,
+        "extendedLinkedShutterGroups": [],
+        "extendedLinkedSwitchingGroups": [],
+        "functionalGroups": [],
+        "shutterProfileGroups": [],
+        "solution": "LIGHT_AND_SHADOW",
+        "switchingProfileGroups": []
+      },
+      "SECURITY_AND_ALARM": {
+        "activationInProgress": false,
+        "active": false,
+        "alarmActive": false,
+        "alarmEventDeviceChannel": null,
+        "alarmEventTimestamp": 0,
+        "alarmSecurityJournalEntryType": null,
+        "functionalGroups": [],
+        "intrusionAlertThroughSmokeDetectors": false,
+        "securitySwitchingGroups": {},
+        "securityZoneActivationMode": "ACTIVATION_WITH_DEVICE_POWER_ON",
+        "securityZones": {},
+        "solution": "SECURITY_AND_ALARM",
+        "zoneActivationDelay": 0.0
+      },
+      "ACCESS_CONTROL": {
+        "accessAuthorizationProfileGroups": [],
+        "active": false,
+        "autoRelockProfileGroups": [],
+        "extendedLinkedGarageDoorGroups": [],
+        "extendedLinkedNotificationGroups": [],
+        "functionalGroups": [],
+        "lockProfileGroups": [],
+        "solution": "ACCESS_CONTROL"
+      },
+      "WEATHER_AND_ENVIRONMENT": {
+        "active": false,
+        "functionalGroups": [],
+        "solution": "WEATHER_AND_ENVIRONMENT"
+      }
+    },
+    "id": "00000000-0000-0000-0000-000000000002",
+    "inboxGroup": "00000000-0000-0000-0000-000000000000",
+    "lastReadyForUpdateTimestamp": 0,
+    "location": {
+      "city": "Test City",
+      "latitude": 48.137154,
+      "longitude": 11.576124
+    },
+    "metaGroups": [],
+    "pinAssigned": false,
+    "powerMeterCurrency": "EUR",
+    "powerMeterUnitPrice": 0.0,
+    "ruleGroups": [],
+    "ruleMetaDatas": {},
+    "timeZoneId": "Europe/Berlin",
+    "updateState": "UP_TO_DATE",
+    "weather": {
+      "humidity": 60,
+      "maxTemperature": 20.0,
+      "minTemperature": 10.0,
+      "temperature": 15.0,
+      "vaporAmount": 3.0,
+      "weatherCondition": "CLEAR",
+      "weatherDayTime": "DAY",
+      "windDirection": 180,
+      "windSpeed": 5.0
+    }
+  }
+}

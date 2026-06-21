@@ -16,6 +16,7 @@ import pytest
 from aiohttp import web
 from aiohttp.test_utils import TestServer
 from homematicip_demo.fake_cloud_server import AsyncFakeCloudServer
+from homematicip_demo.fake_hcu_server import FakeHcuServer
 from homematicip_demo.helper import *
 
 from homematicip.async_home import AsyncHome
@@ -168,6 +169,60 @@ async def no_ssl_fake_async_home(fake_cloud, fake_connection_context_with_ssl, n
 #     yield auth
 #
 #     await auth._connection._websession.close()
+
+
+hcu_test_server = None
+
+
+@pytest.fixture
+async def fake_hcu(aiohttp_server, ssl_ctx, session_stop_threads):
+    """Fixture for a fake hCU (HomematicIP Control Unit) server."""
+    global hcu_test_server
+    if hcu_test_server is None:
+        aio_server = FakeHcuServer()
+        app = web.Application()
+        app.router.add_route("GET", "/{tail:.*}", aio_server)
+        app.router.add_route("POST", "/{tail:.*}", aio_server)
+
+        server = TestServer(app)
+        try:
+            asyncio.run_coroutine_threadsafe(
+                server.start_server(loop=session_stop_threads, ssl=ssl_ctx),
+                session_stop_threads,
+            ).result()
+        except Exception:
+            hcu_test_server = None
+            raise
+        aio_server.url = str(server._root)
+        server.url = aio_server.url
+        server.aio_server = aio_server
+        hcu_test_server = server
+    hcu_test_server.aio_server.reset()
+    return hcu_test_server
+
+
+@pytest.fixture
+def fake_hcu_connection_context(fake_hcu, ssl_ctx_client):
+    access_point_id = FakeHcuServer.HCU_SGTIN
+    auth_token = "8A45BAA53BE37E3FCA58E9976EFA4C497DAFE55DB997DB9FD685236E5E63ED7DE"
+    lookup_url = f"{fake_hcu.url}/getHost"
+
+    return ConnectionContextBuilder.build_context(
+        accesspoint_id=access_point_id,
+        lookup_url=lookup_url,
+        auth_token=auth_token,
+        ssl_ctx=ssl_ctx_client,
+    )
+
+
+@pytest.fixture
+def fake_hcu_home(fake_hcu, fake_hcu_connection_context):
+    home = Home()
+    with no_ssl_verification():
+        home._fake_cloud = fake_hcu
+        home.init_with_context(fake_hcu_connection_context, use_rate_limiting=False)
+        home.get_current_state()
+    return home
 
 
 dt = datetime.now(UTC).astimezone()
